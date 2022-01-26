@@ -1,0 +1,193 @@
+:root {
+    --color-red: #ec1840;
+    --color-purple: #7a18ec;
+    --color-white: #fff;
+    --color-black-1: #111;
+    --speed-normal: 0.5s;
+    --speed-fast: 0.8s;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    min-height: 100vh;
+    background: var(--color-black-1);
+}
+
+.btn1 {
+    position: relative;
+    width: 200px;
+    height: 60px;
+    letter-spacing: 3px;
+    text-decoration: none;
+    border: 1px solid var(--color-purple);
+    text-align: center;
+    justify-content: center;
+    line-height: 60px;
+    font-size: 20px;
+    text-transform: uppercase;
+    color: #fff;
+    border-radius: 25px;
+    transition: var(--speed-normal);
+}
+
+.btn1:hover {
+    border: 1px solid transparent;
+    background: var(--color-red) url(https://i.postimg.cc/wBXGXbWN/pixel.png);
+    transition-delay: 0.8s;
+    background-size: 200px;
+    animation: animate var(--speed-fast) steps(8) forwards;
+}
+
+@keyframes animate {
+    0% {
+        background-position-y: 0;
+    }
+    100% {
+        background-position-y: -480px;
+    }
+}
+
+.btn2 {
+    position: relative;
+    width: 200px;
+    height: 60px;
+    letter-spacing: 3px;
+    margin-top: 50px;
+    text-decoration: none;
+    border: 1px solid var(--color-purple);
+    text-align: center;
+    justify-content: center;
+    line-height: 60px;
+    font-size: 20px;
+    text-transform: uppercase;
+    color: #fff;
+    border-radius: 25px;
+    transition: all 0.5s;
+}
+
+.btn2:before {
+    content: 'BUTTON 2';
+    display: flex;
+    justify-content: center;
+    color: var(--color-red);
+    line-height: 60px;
+    background: rgb(34, 34, 34);
+    letter-spacing: 3px;
+    transition: all 1s;
+    top: 0;
+    left: 100%;
+    width: 100%;
+    height: 100%;
+    border-radius: 25px;
+    transform: scale(0) rotateY(0);
+    opacity: 0;
+    position: absolute;
+}
+
+.btn2:hover::before {
+    transform: scale(1) rotateY(360deg);
+    left: 0;
+    opacity: 1;
+}
+
+.btn2:after {
+    content: 'BUTTON 2';
+    display: flex;
+    justify-content: center;
+    color: var(--color-purple);
+    line-height: 60px;
+    background: rgb(34, 34, 34);
+    letter-spacing: 3px;
+    transition: all 1s;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 25px;
+    transform: scale(1) rotateY(0);
+    opacity: 1;
+    position: absolute;
+}
+
+.btn2:hover:after {
+    transform: scale(0) rotateY(360deg);
+    left: -100%;
+    opacity: 0;
+}
+
+.btn3 {
+    position: relative;
+    width: 200px;
+    height: 60px;
+    letter-spacing: 3px;
+    margin-top: 50px;
+    text-decoration: none;
+    border: 1px solid var(--color-purple);
+    text-align: center;
+    justify-content: center;
+    line-height: 60px;
+    font-size: 20px;
+    text-transform: uppercase;
+    color: #fff;
+    border-radius: 25px;
+    transition: all 0.5s;
+}
+
+.btn3:before {
+    content: 'BUTTON 3';
+    display: flex;
+    justify-content: center;
+    color: var(--color-red);
+    line-height: 60px;
+    background: rgb(34, 34, 34);
+    letter-spacing: 3px;
+    transition: all 1s;
+    top: 0;
+    left: 100%;
+    width: 100%;
+    height: 100%;
+    border-radius: 25px;
+    transform: scale(0) rotate(0);
+    opacity: 0;
+    position: absolute;
+}
+
+.btn3:hover:before {
+    transform: scale(1) rotateY(360deg);
+    left: 0;
+    opacity: 1;
+}
+
+.btn3:after {
+    content: 'BUTTON 3';
+    display: flex;
+    justify-content: center;
+    color: var(--color-white);
+    line-height: 60px;
+    background: rgb(34, 34, 34);
+    letter-spacing: 3px;
+    transition: all 1s;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 25px;
+    transform: scale(1) rotate(0);
+    opacity: 1;
+    position: absolute;
+}
+
+.btn3:hover:after {
+    transform: scale(0) rotate(360deg);
+    left: 100%;
+    opacity: 0;
+}
